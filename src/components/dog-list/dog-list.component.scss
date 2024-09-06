@@ -1,0 +1,19 @@
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 100px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}

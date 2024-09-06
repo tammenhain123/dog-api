@@ -1,3 +1,4 @@
 import { Routes } from '@angular/router';
-
-export const routes: Routes = [];
+import { DogListComponent } from '../components/dog-list/dog-list.component';
+export const routes: Routes = [  { path: '', component: DogListComponent }, // Define o novo componente como a página inicial
+  { path: '**', redirectTo: '' } ];

@@ -1,0 +1,27 @@
+<div *ngIf="isLoading" class="loading-spinner">
+  <!-- Aqui você pode colocar um componente de carregamento ou um texto simples -->
+  Loading...
+</div>
+
+<div *ngIf="!isLoading" class="container">
+  <div class="card-grid">
+    <app-dog-card
+      *ngFor="let dog of paginatedDogs"
+      [image]="dog.reference_image"
+      [name]="dog.name"
+      [bred_for]="dog.bred_for"
+      [temperament]="dog.temperament"
+      [origin]="dog.origin"
+    >
+    </app-dog-card>
+  </div>
+  <div class="paginator">
+    <mat-paginator
+      [length]="dogs.length"
+      [pageSize]="pageSize"
+      aria-label="Select page"
+      (page)="onPageChange($event)"
+    >
+    </mat-paginator>
+  </div>
+</div>

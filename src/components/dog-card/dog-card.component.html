@@ -1,0 +1,9 @@
+<div class="card">
+  <img [src]="image" alt="{{ name }}" class="dog-image" />
+  <div class="card-content">
+    <h3>{{ name }}</h3>
+    <p *ngIf="bred_for"><strong>Raça:</strong> {{ bred_for }}</p>
+    <p *ngIf="temperament"><strong>Temperamento:</strong> {{ temperament }}</p>
+    <p *ngIf="origin"><strong>Origem:</strong> {{ origin }}</p>
+  </div>
+</div>
